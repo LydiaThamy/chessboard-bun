@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ gameId }}</title>
+
+    <!-- load jQuery which is a dependency of chessboardjs -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2"
+        crossorigin="anonymous"></script>
+
+    <!-- load chessboardjs -->
+    <link rel="stylesheet" href="/css/chessboard-1.0.0.min.css">
+    <script src="/js/chessboard-1.0.0.min.js"></script>
+
+    <!-- defer loading of js script before you make the query -->
+    <script defer src="/chess.js"></script>
+
+</head>
+
+<!-- html5 allows for adding of attribute in its tags -->
+<body data-game-id="{{ gameId }}" data-orientation="{{ orientation }}">
+    <h1>Game ID: <code>{{ gameId }}</code></h1>
+
+    <!-- display chessboardjs -->
+    <section>
+        <div id="chess" style="width: 400px;"></div>
+    </section>
+
+    <br>
+    <button onclick="window.location.href='/'">Back</button>
+</body>
+
+</html>
